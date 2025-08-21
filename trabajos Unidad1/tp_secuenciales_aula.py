@@ -8,6 +8,7 @@ print(' ')
  #realizar la impresión por pantalla.
 nombre = input('Ingresa tu nombre')
 print(f'Hola {nombre}!')
+print(' ')
 
 #3) Crear un programa que pida al usuario su nombre, apellido, edad y lugar de residencia e
  #imprima por pantalla una oración con los datos ingresados. Por ejemplo: si el usuario ingresa
