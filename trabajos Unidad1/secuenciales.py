@@ -11,3 +11,4 @@ print('la propina del 15% es: ', propina15)
 print('Total si aplico el 10%: ', monto_total+propina10)
 print('Total si aplico el 15%: ', monto_total+propina15)
 #Mostrar todos los resultados en pantalla.
+asdfghjkl
