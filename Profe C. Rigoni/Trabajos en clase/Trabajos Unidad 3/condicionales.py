@@ -34,8 +34,7 @@ else:
             print("Asistio la mayoria")
         else:
             print("No asistio la mayoria")
-    if dia_semana == 'viernes':
-        if dia == 1 and
+  
 
 
 
