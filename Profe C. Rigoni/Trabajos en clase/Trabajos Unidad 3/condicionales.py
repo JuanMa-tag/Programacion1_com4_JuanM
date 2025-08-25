@@ -33,9 +33,8 @@ else:
         if asistencia > 50:
             print("Asistio la mayoria")
         else:
-            print("No asistio la mayoria")
-  
+            print("No asistio la mayoria"
 
 
 
-    
+
