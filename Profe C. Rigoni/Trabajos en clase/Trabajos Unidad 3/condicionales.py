@@ -33,9 +33,10 @@ else:
             print("Asistio la mayoria")
         else:
             print("No asistio la mayoria")
-
-            
-
-
-
-
+if dia_semana == 'viernes':
+    if (dia_DD == 1 and (mes_MM == 1 or mes_MM == 7)):
+        print("Comienzo de nuevo ciclo")
+        alumnos = int(input("Ingrese la cantidad de alumnos del nuevo ciclo: "))
+        arancel = float(input("Ingrese el arancel en $ por cada alumno: "))
+        ingreso_total = alumnos * arancel
+        print(f"El ingreso total en $ es: {ingreso_total}")
