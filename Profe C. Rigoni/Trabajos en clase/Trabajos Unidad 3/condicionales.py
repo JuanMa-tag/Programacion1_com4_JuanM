@@ -1,39 +1,40 @@
-semana = ["lunes","martes","miercoles","jueves","viernes"]
-
-semana1 = input("Ingrese el dia y la fecha en formato DD/MM: ")
+fecha_actual = input("Ingrese el dia y la fecha en formato DD/MM: ")
 
 #Divide las partes del dia con la fecha completa
 
-partes = semana1.split(",")
+partes = fecha_actual.split(",")
 
 dia_semana = partes[0].strip().lower()
 fecha = partes[1].strip()
 
-#Divide la
+#Divide la fecha "DD/MM"
 fecha_partes = fecha.split("/")
-dia = int(fecha_partes[0])
-mes = int(fecha_partes[1])
+dia_DD = int(fecha_partes[0])
+mes_MM = int(fecha_partes[1])
 
-if dia < 1 or dia > 31:
-    print("Dia incorrecto")
+if dia_DD < 1 or dia_DD > 31:
+    print("El Dia es incorrecto")
 
-if mes < 1 or mes > 12:
-    print("Mes incorrecto")
+if mes_MM < 1 or mes_MM > 12:
+    print("El Mes es incorrecto")
+
 
 if dia_semana != 'jueves' and dia_semana != 'viernes':
-    exam = input("¿Hubo examenes?(Responder con Si o No)").lower
+    exam = input("¿Hubo examenes?(Responder con si o no)").lower()
     if exam == 'si':
-        aprobados = input(int("Ingrese la cantidad de alumnos aprobados: "))
-        desaprobados = input(int("Ingrese la cantidad de alumnos desaprobados"))
-        porcentaje = aprobados / (aprobados + desaprobados) * 100
-        print(f"El porcentaje de aprobados es de: {porcentaje}")
+        aprobados = int(input("Ingrese la cantidad de alumnos aprobados: "))
+        desaprobados = int(input("Ingrese la cantidad de alumnos desaprobados: "))
+        porcentaje_aprobados = aprobados / (aprobados + desaprobados) * 100
+        print(f"El porcentaje de aprobados es de: {porcentaje_aprobados}")
 else:
     if dia_semana == 'jueves':
-        asistencia = input(int("Ingrese el porcentaje de asistencia:"))
+        asistencia = int(input("Ingrese el porcentaje de asistencia:"))
         if asistencia > 50:
             print("Asistio la mayoria")
         else:
-            print("No asistio la mayoria"
+            print("No asistio la mayoria")
+
+            
 
 
 
