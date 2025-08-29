@@ -23,3 +23,32 @@ if numero % 2 == 0:
     print('Ha ingresado un número par')
 else:
     print('Por favor, ingrese un número par')
+print(' ')
+
+# 4) Escribir un programa que solicite al usuario su edad e imprima por pantalla a cuál de las
+# siguientes categorías pertenece:
+# ● Niño/a: menor de 12 años.
+# ● Adolescente: mayor o igual que 12 años y menor que 18 años.
+# ● Adulto/a joven: mayor o igual que 18 años y menor que 30 años.
+# ● Adulto/a: mayor o igual que 30 años.
+edad_ola= int(input('ingrese su edad: '))
+if edad_ola <12:
+    print('Niño/a')
+elif edad_ola >= 12 and edad_ola < 18:
+    print('Adolescente')
+elif edad_ola >= 18 and edad_ola < 30:
+    print('Adulto/a joven')
+elif edad_ola >= 30:
+    print('Adulto/a')
+print(' ')
+
+# 5) Escribir un programa que permita introducir contraseñas de entre 8 y 14 caracteres
+# (incluyendo 8 y 14). Si el usuario ingresa una contraseña de longitud adecuada, imprimir por en
+# pantalla el mensaje "Ha ingresado una contraseña correcta"; en caso contrario, imprimir por
+# pantalla "Por favor, ingrese una contraseña de entre 8 y 14 caracteres"
+contraseña= input('ingrese una contraseña entre 8 y 14 caracteres: ')
+long_contraseña= len(contraseña)
+if long_contraseña >= 8 and long_contraseña<= 14:
+    print('Ha ingresado una contraseña correcta')
+else:
+    print('Por favor, ingrese una contraseña de entre 8 y 14 caracteres')
