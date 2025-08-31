@@ -52,3 +52,16 @@ if long_contraseña >= 8 and long_contraseña<= 14:
     print('Ha ingresado una contraseña correcta')
 else:
     print('Por favor, ingrese una contraseña de entre 8 y 14 caracteres')
+
+    
+
+    # 7) Escribir un programa que solicite una frase o palabra al usuario. Si el string ingresado
+# termina con vocal, añadir un signo de exclamación al final e imprimir el string resultante por
+# pantalla; en caso contrario, dejar el string tal cual lo ingresó el usuario e imprimirlo por
+# pantalla.
+frase= input('ingrese un palabra o frase: ')
+vocales= ['a','e','i','o','u','A','E','I','O','U']
+if frase[-1] in vocales:
+    print(frase + '!')
+else:
+    print(frase)
