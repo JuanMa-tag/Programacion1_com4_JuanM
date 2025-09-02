@@ -1,10 +1,8 @@
 letras_abc="abcdefghijklmnopqrstuvxyz"
-
 cant=5
 for cant in range(5):
     print('-------------------------')
     print('OFICIAL', 1+cant)
-    cifrado=""
     mensaje = input("Ingrese su mensaje: ")
     corrimiento=int(input("Ingrese el corrimiento deseado: "))
     for letra_mensaje in mensaje:
@@ -15,6 +13,7 @@ for cant in range(5):
                       nueva_letra= letras_abc[nueva_pos]
                       cifrado=cifrado+nueva_letra
     print(cifrado)
+
 
 
 
