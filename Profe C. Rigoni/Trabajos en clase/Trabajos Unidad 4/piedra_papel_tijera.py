@@ -1,8 +1,10 @@
+#JUEGO: piedra, papel o tijera
 import random
 
 opciones = ['piedra', 'papel', 'tijera']
 
 while True:
+    print('------------------------------------------')
     print('--- Juego: Piedra, Papel o Tijera ---')
     print('Elige una opción:')
     print('1. Piedra')
@@ -14,7 +16,7 @@ while True:
         print('¡Gracias por jugar!')
         break
     if eleccion not in ['1', '2', '3']:
-        print('Opción inválida. Intenta de nuevo.')
+        print('Número inválido. Intenta de nuevo.')
         continue
     jugador = opciones[int(eleccion)-1]
     computadora = random.choice(opciones)
@@ -28,4 +30,3 @@ while True:
         print('¡Ganaste!')
     else:
         print('¡Perdiste!')
-    print()
