@@ -49,11 +49,11 @@ if hemisferio == 'sur':
             else:
                 if dia >=21:
                     print('¡¡VERANO!!')
-    #------------------------------------------------
-    #------- HEMISFERIO NORTE ------- 
+    #-----------------------------------------------
+ #------- HEMISFERIO NORTE-------- 
 else:
     if hemisferio == 'norte':
-        ## Primera Estación: (VERANO)
+        ## Primera Estación: (INVIERNO)
         if (mes_del_año == 'enero') or (mes_del_año == 'febrero'):
             if dia >= 1 and dia <31:
                  print('¡¡INVIERNO!!')
@@ -65,10 +65,35 @@ else:
         elif (mes_del_año == 'julio') or (mes_del_año == 'agosto'):
             if dia >= 1 and dia <=31:
                 print('¡¡VERANO!!')
-
-
-
-
+    # ---------MESES CON ESTACIONES COMPARTIDAS---------
+        # Marzo: (Invierno-Primavera)
+        if mes_del_año =='marzo':
+                if dia <=20:
+                    print('¡¡INVIERNO!')
+                else:
+                     if dia >=21:
+                            print('¡¡PRIMAVERA!!')    
+        #Junio: (Primavera-Verano)
+        if mes_del_año == 'junio':
+                if dia <= 20 :
+                    print('¡¡PRIMAVERA!!')
+                else:
+                    if dia >=21:
+                        print('¡¡VERANO!')
+        #Septiembre: (Verano-Otoño)
+        if mes_del_año == 'septiembre':
+                if dia <= 20 :
+                    print('¡¡VERANO!!')
+                else:
+                    if dia >=21:
+                        print('¡¡OTOÑO!!')
+        #Diciembre: (Otoño-Invierno)
+        if mes_del_año == 'diciembre':
+                if dia <= 20 :
+                    print('¡¡OTOÑO!!')
+                else:
+                    if dia >=21:
+                        print('¡¡INVIERNO!!')                                   
 
 
 
