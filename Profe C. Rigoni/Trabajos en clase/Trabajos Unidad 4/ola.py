@@ -18,21 +18,24 @@ if hemisferio == 'sur':
                 
 
     ## Segunda Estacion: (OTOÑO)            
-    elif (mes_del_año == 'abril') or (mes_del_año == 'mayo') or (mes_del_año == 'junio'):
-        if mes_del_año == 'junio':
-            if dia <= 20 :
-                print('¡¡OTOÑO!!')
-    else:
+    elif (mes_del_año == 'abril') or (mes_del_año == 'mayo'):
         if dia >= 1 and dia <=31:
                 print('¡¡OTOÑO!!')              
     
     if mes_del_año =='marzo':
             if dia <=20:
                 print('¡¡VERANO!!')
-                print('----------------')
-    else:
-         if dia >=21:
-              print('¡¡OTOÑO!!')
+            else:
+                if dia >=21:
+                    print('¡¡OTOÑO!!')
+
+    if mes_del_año == 'junio':
+            if dia <= 20 :
+                print('¡¡OTOÑO!!')
+            else:
+                if dia >=21:
+                    print('¡¡INVIERNO!!')
+                               
                            
                 
 
