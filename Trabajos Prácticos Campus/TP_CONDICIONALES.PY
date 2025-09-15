@@ -52,15 +52,32 @@ if long_contraseña >= 8 and long_contraseña <= 14:
     print('Ha ingresado una contraseña correcta')
 else:
     print('Por favor, ingrese una contraseña de entre 8 y 14 caracteres')
+print(' ')
 
+# 6. Escribir un programa que tome la lista
+# numeros_aleatorios, calcule su moda, su mediana y su media y las compare para determinar si
+# hay sesgo positivo, negativo o no hay sesgo. Imprimir el resultado por pantalla.
+import random 
+from statistics import mode,median,mean
+#Números aleatorios 
+numeros_aleatorios= [random.randint(1,100) for i in range(50)]
 
+#Se calcula la media, mediana y la moda 
+moda = mode(numeros_aleatorios)
+mediana= median(numeros_aleatorios)
+media= mean(numeros_aleatorios)
+print(f'\nModa: {moda}')
+print(f'Mediana: {mediana}')
+print(f'Media: {media:.2f}')
 
-
-
-
-
-
-
+#se determina el sesgo
+if media > mediana > moda:
+    print('hay sesgo positivo')
+elif media < mediana < moda:
+    print('hay sesgo negativo')
+else:
+    print('no hay sesgo')    
+print(' ')
 
     # 7) Escribir un programa que solicite una frase o palabra al usuario. Si el string ingresado
 # termina con vocal, añadir un signo de exclamación al final e imprimir el string resultante por
@@ -207,5 +224,4 @@ else:
                 else:
                     if dia >=21:
                         print('¡¡INVIERNO!!')
-
-
+                        
