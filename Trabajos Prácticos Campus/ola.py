@@ -1,8 +1,13 @@
-# 3) Escribe un programa que sume todos los números enteros comprendidos entre dos valores
-# dados por el usuario, excluyendo esos dos valores.
+# 4) Elabora un programa que permita al usuario ingresar números enteros y los sume en
+# secuencia. El programa debe detenerse y mostrar el total acumulado cuando el usuario ingrese
+# un 0.
+salir=1
+acumulado=0
+while salir==1:
+    print('INGRESA UN 0 PARA SALIR')
+    num=int(input('Ingresa el úmero para sumar: '))
+    acumulado= acumulado+ num
+    if num ==0:
+        salir=0
+        print(f'El total acumulado es {acumulado}')
 
-num1=int(input('Ingresa el primer número: '))
-num2=int(input('Ingresa el segundo número: '))
-
-for i in range(num1+1,num2,1):
-    
