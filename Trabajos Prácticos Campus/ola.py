@@ -4,5 +4,5 @@
 num1=int(input('Ingresa el primer número: '))
 num2=int(input('Ingresa el segundo número: '))
 
-for i in range(num1+1,num2,1)
+for i in range(num1+1,num2,1):
     
