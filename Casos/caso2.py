@@ -13,7 +13,7 @@ while True:
     if opcion=='1':  # 1.	Ingresar nombres de estudiantes: (Registrar los alumnos del curso)
         cant=int(input('ingresa la cantidad de alumnos que desea ingresar: '))
         for i in range(cant):
-            alumno_agregado=input("Alumno : ")
+            alumno_agregado=input(f"Alumno {i+1}: ")
             alumnos.append(alumno_agregado)
             asistencias.append(0)
     elif opcion=='2':  #Mostrar listado con asistencias
