@@ -1,12 +1,13 @@
-# 3) Crear una lista vacía, agregar tres palabras con append e imprimir la lista resultante por
-# pantalla.
+# 5) Analizar el siguiente programa y explicar con tus palabras qué es lo que realiza.
 
-lista_vacia=[]
-for i in range(3):
-    palabras=input(f'Ingresa la palabra Nro {i+1}: ')
-    lista_vacia.append(palabras)
+numeros = [8, 15, 3, 22, 7] #Acá se crea la lista y se le agregan elementos.
 
-print(lista_vacia)
+numeros.remove(max(numeros))# Acá con la funcion max se busca el numero mayor y con remove se elimina el numero buscado.
+
+
+print(numeros)# Se imprime la lista sin el elemento que se eliminó.
+
+
 
 
 
