@@ -63,22 +63,12 @@ while True:
             if cambiar_estado in habitaciones[i]:
                 estados[i]=int(input('Ingresa el estado de la habitacion: '))
                 print('La habitación "',(habitaciones[i]),'" Se actualizo' )
-                print(estados[i])
-                   
-                   
-
-
-
-
-
-
-
-
-
-
-
-# print('La habitación ',(habitaciones[i]),' ocupada')
-           
-# print('La habitación ',(habitaciones[i]),)
-
-
+    elif opcion== '9':
+        for i in range(len(habitaciones)):
+            if estados[i]==0:
+                print('La habitación "',(habitaciones[i]),'" libre')
+            elif estados[i]==1:
+                print('La habitación "',(habitaciones[i]),'" ocupada')
+    elif opcion=='10':
+        print('GRACIAS')
+        break            
