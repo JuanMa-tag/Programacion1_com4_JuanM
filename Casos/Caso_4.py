@@ -17,7 +17,14 @@ while True:
         cant=int(input('Ingresa la cantidaad de clases que desea agregar: '))
         for i in range(cant):
             clase_ingresada=input('Ingresa la clase: ')
-            clases.append(clase_ingresada)
+            #clases.append(clase_ingresada)
+            if clase_ingresada==' ':
+                print('clase no valida ')
+            elif clase_ingresada in clases:
+                print('La clase ingresada ya fue registrada ')
+            else:
+                clases.append(clase_ingresada)        
+                
     elif opcion=='2':
         for i in range(len(clases)):
             print('Ingresa el cupo para cada clase')
