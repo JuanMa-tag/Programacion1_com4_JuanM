@@ -14,7 +14,7 @@ while True:
     """)
     opcion=input('Ingresa la opcion deseada: ')
     if opcion=='1':
-        cant=int(input('Ingresa la cantidaad de clases que desea ingresar: '))
+        cant=int(input('Ingresa la cantidaad de clases que desea agregar: '))
         for i in range(cant):
             clase_ingresada=input('Ingresa la clase: ')
             clases.append(clase_ingresada)
@@ -47,10 +47,12 @@ while True:
         for i in range(len(clases)):
             if clase_del_alumno == clases[i]:
                 if alumno ==1:
-                    cupos[i]= cupos[i]-1
+                    if cupos[i]==0:
+                        print('La clase no tiene cupos disponibles')
+                    else:
+                        cupos[i]= cupos[i]-1
                 elif alumno==2:
-                     cupos[i]= cupos[i]+1
+                    cupos[i]= cupos[i]+1
     elif opcion=='8':
         print('GRACIASS')
         break
-    
