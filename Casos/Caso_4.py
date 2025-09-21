@@ -9,10 +9,8 @@ while True:
         4.Consultar cupo de una clase
         5.Listar clases sin cupo
         6.Agregar clase
-        7.Ver sin cupo
-        8.Actualizar cupos (inscribir/baja)
-        9.Ver todas clases
-        10.Salir
+        7.Actualizar cupos (inscribir/baja)
+        8.Salir
     """)
     opcion=input('Ingresa la opcion deseada: ')
     if opcion=='1':
@@ -43,26 +41,16 @@ while True:
         nuevo_cupos=int(input('Igresa la cantidad de cupos disponibles: '))
         clases.append(nueva_clase)
         cupos.append(nuevo_cupos)
-    elif opcion =='8':
-        alumno=int(input('Ingresa  1. para inscribir un alumno/  2. para  dar de baja a un alumno: '))
+    elif opcion =='7':
+        alumno=int(input('Ingresa  1. Para inscribir un alumno/  2. Para  dar de baja a un alumno: '))
         clase_del_alumno=input('Ingresa la clase que quieras actualizar: ')
         for i in range(len(clases)):
-            for i in range(len(clases)):
-                if clase_del_alumno == clases[i]:
-                    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            if clase_del_alumno == clases[i]:
+                if alumno ==1:
+                    cupos[i]= cupos[i]-1
+                elif alumno==2:
+                     cupos[i]= cupos[i]+1
+    elif opcion=='8':
+        print('GRACIASS')
+        break
+    
