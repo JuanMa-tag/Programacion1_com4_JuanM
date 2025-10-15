@@ -57,7 +57,22 @@ print(lista_de_frutas)
 # 4) Escribí un programa que permita almacenar y consultar números telefónicos.
 #  Permití al usuario cargar 5 contactos con su nombre como clave y número como valor.
 #  Luego, pedí un nombre y mostrale el número asociado, si existe.
+def nombres_claves(clave, valor, registro_numeros): #Funcion para registrar los numeros (keys) y los numeros (values)
+    registro_numeros[clave]= valor
+    return registro_numeros
 
+registro={}
+for i in range(2):
+    nombre=input(f'Ingresa el nombre de la persona Nro {i+1}: ')
+    numero=int(input('Ahora ingresa su número: '))
+    nombres_claves(nombre,numero,registro)
+print(registro, '\n') #Se imprimen los numeros registrados
+
+buscar_valor=input('Ingrese el nombre para ver el numero asociado: ')
+if buscar_valor in registro:
+        print(f'El nombre a sido encontrado, el numero es: {registro[buscar_valor]}')
+else:
+    print('El nombre no esta registrado')
 
 
 # 5) Solicita al usuario una frase e imprime:
