@@ -78,25 +78,149 @@ else:
 # 5) Solicita al usuario una frase e imprime:
 #  Las palabras únicas (usando un set).
 #  Un diccionario con la cantidad de veces que aparece cada palabra.
+frase=input('ingrese una frase: ')
+palabras = frase.lower().split()
+palabras_unicas = set(palabras)
+print("\n Palabras Únicas")
+print(palabras_unicas)
+
+print("--------------------------")
+frecuencia = {}
+for palabra in palabras:
+  if palabra in frecuencia:
+    frecuencia[palabra] += 1
+  else:
+    frecuencia[palabra] = 1
+print(frecuencia)
+
 
 # 6) Permití ingresar los nombres de 3 alumnos, y para cada uno una tupla de 3 notas.
 # Luego, mostrá el promedio de cada alumno.
+alumnos = {}
+print("--- Ingreso de Alumnos y Notas ---")
+
+for i in range(3):
+    print('\n------------------------------------------------ ')
+    alumno=input(f'ingresa el nombre el alumno Nro {i+1}: ')
+    notas_list=[]
+    for j in range(3):
+        notas=float(input(f'ingresa la nota Nro {j+1}: '))
+        notas_list.append(notas)
+    alumnos[alumno] = tuple(notas_list)
+
+print('-----Promedios-----')    
+for alumno, notas in alumnos.items():
+    promedio = sum(notas) /3
+    print(f"\nEl promedio de {alumno} es: {promedio:.2f}")
+
 
 # 7) Dado dos sets de números, representando dos listas de estudiantes que aprobaron Parcial 1 y Parcial 2:
 #  Mostrá los que aprobaron ambos parciales.
 #  Mostrá los que aprobaron solo uno de los dos.
 #  Mostrá la lista total de estudiantes que aprobaron al menos un parcial (sin repetir).
+def Los_dos_parciales(primer,segundo):
+   #Alumnos que aprobaron AMBOS parciales
+    ambos_parciales = primer & segundo
+    return print(ambos_parciales)
+
+def Un_solo_parcial(primer,segundo):
+    # Alumnos que aprobaron SOLO UNO de los dos parciales
+    solo_un_parcial = primer ^ segundo
+    return print(solo_un_parcial)
+
+def Todos_los_aprobados(primer,segundo):
+    # Lista total de alumnos que aprobaron AL MENOS UN parcial (Unión)
+    aprobados = primer| segundo
+    return print(aprobados)
+
+parcial_1 = {'Ana', 'Luis', 'Maria', 'Juan', 'Pedro', 'Sofia'}
+parcial_2 = {'Carlos', 'Maria', 'Juan', 'Laura', 'Pedro', 'Diego'}
+print(f'Alumnos que aprobaron Parcial 1: {parcial_1}')
+print(f'Alumnos que aprobaron Parcial 2: {parcial_2}')
+
+#Interseccion
+print(f'\nAlumnos que aprobaron ambos parciales:')
+Los_dos_parciales(parcial_1,parcial_2)
+#Diferencia simétrica
+print(f'\nAlumnos que aprobaron solo uno de los dos parciales:')
+Un_solo_parcial(parcial_1,parcial_2)
+#Unión
+print(f'\nLista total de alumnos que aprobaron al menos un parcial:')
+Todos_los_aprobados(parcial_1, parcial_2)
+
 
 # 8) Armá un diccionario donde las claves sean nombres de productos y los valores su stock.
 # Permití al usuario:
 #  Consultar el stock de un producto ingresado.
 #  Agregar unidades al stock si el producto ya existe.
 #  Agregar un nuevo producto si no existe.
+productos_y_stocks={}
+while True:
+    print("""Ingrese la opcion que desee
+        1. Consultar el stock de un producto ingresado.
+        2. Agregar unidades al stock si el producto ya existe.
+        3. Agregar un nuevo producto si no existe.""")
+    opcion=input()
+    if opcion=='1':  #Consultar el stock de un producto ingresado.
+        consultar_producto=input('¿Cuál es el producto que desea consultar? ')
+        if consultar_producto in productos_y_stocks:
+            print(f'El stock del producto "{consultar_producto}" es: {productos_y_stocks[consultar_producto]}')
+        else:
+            print('El producto no fue agregado')
+    elif opcion=='2':  #Agregar unidades al stock si el producto ya existe.
+        producto_existente=input('Indique el producto a actualizar: ')
+        agregar_stocks=int(input('Ingresa la cantidad de stocks que desea agregar: '))
+        productos_y_stocks[producto_existente]+= agregar_stocks
+    elif opcion=='3':  #Agregar un nuevo producto si no existe.
+        producto_agregar=input('Ingresa el producto que desea agregar: ')
+        stock_del_producto=int(input('Ahora ingrese el stock del producto agregado: '))
+        productos_y_stocks[producto_agregar]= stock_del_producto
+    else:
+        break
+
 
 # 9) Creá una agenda donde las claves sean tuplas de (día, hora) y los valores sean eventos.
 # Permití consultar qué actividad hay en cierto día y hora.
+agenda = {
+    ('lunes', '10:00'): 'Reunión de equipo',
+    ('martes', '09:00'): 'Cita con el dentista',
+    ('miércoles', '15:30'): 'Entregar reporte',
+    ('viernes', '20:00'): 'Cena con amigos',
+    ('sábado', '11:00'): 'Partido de fútbol'
+}
+
+print('--- Agenda de Eventos ---')
+while True:
+    dia = input('\nIngrese el día que desea consultar (o \'salir\' para terminar): ').lower()
+    if dia == 'salir':
+        print('¡Hasta luego!')
+        break
+        
+    hora = input(f'Ingrese la hora para el día {dia} (formato HH:MM): ')
+    consulta = (dia, hora)
+    evento = agenda.get(consulta, 'No hay ninguna actividad programada en esa fecha y hora.')
+    print(evento)
+
 
 # 10) Dado un diccionario que mapea nombres de países con sus capitales, construí un nuevo
 # diccionario donde:
 #  Las capitales sean las claves.
 #  Los países sean los valores.
+paises_a_capitales = {
+    'Argentina': 'Buenos Aires',
+    'España': 'Madrid',
+    'Francia': 'París',
+    'Italia': 'Roma',
+    'Japón': 'Tokio'
+}
+
+print('--- Diccionario Original ---')
+print(paises_a_capitales)
+capitales_a_paises = {}
+for pais, capital in paises_a_capitales.items():
+    capitales_a_paises[capital] = pais
+
+print('\n--- Diccionario Invertido ---')
+print(capitales_a_paises)
+
+
