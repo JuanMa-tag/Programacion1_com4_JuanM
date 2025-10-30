@@ -2,3 +2,6 @@ nombre,precio,cantidad
 Manzanas,500,10
 Leche,1000,2
 Pan,200,1
+arroz,222,1
+banana,300,2
+vodka,40000,2
