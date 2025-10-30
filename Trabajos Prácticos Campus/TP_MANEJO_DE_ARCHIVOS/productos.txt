@@ -1,0 +1,6 @@
+nombre,precio,cantidad
+Manzanas,500,10
+Leche,1000,2
+Pan,200,1
+Huevos,350,12
+Arroz,150,1
