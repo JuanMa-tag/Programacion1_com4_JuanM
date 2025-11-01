@@ -1,3 +1,6 @@
+# 3. Agregar productos desde teclado: Modificar el programa para que luego de mostrar
+# los productos, le pida al usuario que ingrese un nuevo producto (nombre, precio,
+# cantidad) y lo agregue al archivo sin borrar el contenido existente
 def producto_agregado(nombre_archivo):
     # Pedimos los datos del nuevo producto por teclado
     nuevo_nombre = input("Ingrese el nombre del producto: ")
